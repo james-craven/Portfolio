@@ -1,0 +1,155 @@
+/* 
+
+Filler Comment
+
+*/
+
+body {
+	color:#000!important;
+	background-color:#f1f1f1!important;
+	margin: 0px auto;
+	max-width:1600px;
+	font-family: Verdana, sans-serif;
+	font-size: 15px;
+	line-height: 1.5;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family:"Segoe UI",Arial,sans-serif;
+	font-weight:400;
+	margin:10px 0;
+}
+
+h1 {
+	font-size:36px;
+}
+
+h2 {
+	font-size:30px;
+}
+
+h3 {
+	font-size:24px;
+}
+
+h4 {
+	font-size:20px;
+}
+
+h5 {
+	font-size:18px;
+}
+
+h6 {
+	font-size:16px;
+}
+
+nav {
+	display: block!important;
+	height:100%;
+	position:fixed!important;
+	overflow:auto;
+	color:#000!important;
+	background-color:#fff!important;
+	z-index:3;
+	width:300px;
+}
+
+/*Makes The Nav Bar Slide In From The Left When The Page Loads*/
+nav.animate {
+	position:relative;
+	animation:animateleft 0.4s;
+}
+
+@keyframes animateleft{from{left:-300px;opacity:0} to{left:0px;opacity:1}}
+
+/*Includes the picture, the close nav bar icon, and the h4 name heading*/
+nav section {
+	padding: 0.01em 16px;
+	color: #000!important;
+}
+
+/* Clear Fix Technique for Nav Bar Section Element */
+nav section::before, nav section::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/*Font Awesome Icon To Close Nav Bar On Smaller Windows*/
+nav section a.closeNav {
+	display: none!important;
+}
+
+/*Nav Bar Picture Of Me Styles*/
+
+nav section img {
+	width: 45%;
+	border-radius: 4px;
+	vertical-align: middle;
+	border-style: none;
+	color: #000!important;
+}
+
+/*Nav Links Styles*/
+nav div {
+	color: #000!important;
+}
+
+nav div a {
+	color: inherit;
+	width:100%;
+	display: block;
+	text-align: left;
+	border: none;
+	white-space: normal;
+	float: none;
+	outline: 0;
+	padding: 8px 16px!important;
+	vertical-align: middle;
+	overflow: hidden;
+	text-decoration: none;
+	background-color: inherit;
+	cursor: pointer;
+}
+
+/*
+
+The nav div a i classes come from the font-awesome framework. 
+Their Styles are as follows: 
+
+.fa {
+	display:inline-block;
+	font:normal normal normal 14px/1 FontAwesome;
+	font-size:inherit;
+	text-rendering:auto;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+
+.fa-fw {
+    width:1.28571429em;
+    text-align:center
+}
+
+The fa-th-large, fa-user, and fa-envelope are the icons themselves.
+See Documentation at http://fontawesome.io
+
+These styles are applied through the link to the font-awesome stylesheet in index.html.
+
+*/
+
+nav div a:first-of-type {
+	color: #009688!important;
+}
+
+nav div a:hover {
+	color: #000!important;
+	background-color: #ccc!important;
+}
+
+nav div a i {
+	margin-right: 16px!important;
+}
