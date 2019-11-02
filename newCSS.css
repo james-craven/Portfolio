@@ -1,6 +1,13 @@
-/* 
+/*
+   New Perspectives on HTML and CSS
+   Final Assignment
 
-Filler Comment
+   Portfolio General Style Sheet
+   Author: James Craven
+   Date:   11/01/2019
+
+   Filename:         newCSS.css
+   Supporting Files: none
 
 */
 
@@ -172,8 +179,13 @@ textarea {
 
 /* End extract */
 
+/* Had To Set The Following 2 Rules To Get The Body To Wrap The Whole Page */
+
 html, body{min-height:100%;}
+
 body{height:100vh;}
+
+/* General Page And Body Styles To Be Inherited By Subsequent Rules */
 
 body {
 	color:#000!important;
@@ -217,6 +229,14 @@ h6 {
 	font-size:16px;
 }
 
+/* Prevents Standard Blue Color For Links */
+
+a:visited {
+	color: inherit;
+}
+
+/* Navigation Bar Styles */
+
 nav {
 	display: block;
 	height:100%;
@@ -229,6 +249,7 @@ nav {
 }
 
 /*Makes The Nav Bar Slide In From The Left When The Page Loads*/
+
 nav.animate {
 	position:relative;
 	animation:animateleft 0.4s;
@@ -236,7 +257,8 @@ nav.animate {
 
 @keyframes animateleft{from{left:-300px;opacity:0} to{left:0px;opacity:1}}
 
-/*Includes the picture, the close nav bar icon, and the h4 name heading*/
+/* Nav Section Includes The Picture, The Close Nav Bar Icon, And The h4 Name Heading */
+
 nav section {
 	padding: 0.01em 16px;
 	color: #000!important;
@@ -259,14 +281,6 @@ nav section a:hover {
 	background-color: #9e9e9e!important;
 }
 
-
-/* Clear Fix Technique */
-.clearfix:before, .clearfix:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-
 /*Nav Bar Picture Of Me Styles*/
 
 nav section img {
@@ -278,6 +292,7 @@ nav section img {
 }
 
 /*Nav Links Styles*/
+
 nav div {
 	color: #000!important;
 	margin-top: 25px;
@@ -298,14 +313,6 @@ nav div a {
 	text-decoration: none;
 	background-color: inherit;
 	cursor: pointer;
-}
-
-table tbody tr td a {
-	color: black;
-}
-
-table tbody tr td a:hover {
-	color: blue;
 }
 
 /*
@@ -346,6 +353,16 @@ nav div a i {
 	margin-right: 16px!important;
 }
 
+div.pagelinks {
+	margin-top: 25px;
+}
+
+nav div.resume a:hover {
+	background-color: white!important;
+}
+
+/* Displays A Grey Overlay When Opening Sidebar On Small Screens */
+
 #myOverlay {
 	cursor: pointer;
 	animation: opac 0.8s;
@@ -362,11 +379,15 @@ nav div a i {
 
 @keyframes opac{from{opacity:0} to{opacity:1}}
 
+/* Main Div Used To Move All Content Beside The Nav Bar */
+
 div.main {
 	margin-left: 300px;
 	transition: margin-left .4s;
 	height: 100%;
 }
+
+/* Header Video Styles Used To Position The Video And Hide Unneeded Portions */
 
 .headerVideo {
 	width:100%;
@@ -381,6 +402,8 @@ div.main {
 	margin-left: -120px;
 }
 
+/* Header Image Styles//Will Only Show On Small Screens When Nav Bar Disappears */
+
 header img {
 	width:65px;
 	border-radius: 50%;
@@ -393,6 +416,8 @@ header img {
 header img:hover {
 	opacity: 0.6;
 }
+
+/* Open Nav Bar Button On Small Screens */
 
 header span {
 	font-size: 36px!important;
@@ -414,14 +439,20 @@ header span:hover {
 	background-color: #ccc!important;
 }
 
+/* Added h1 Styles To Over-ride Style Reset */
+
 h1 {
 	padding: 0.01em 16px!important;
 	font-size: 30px!important;
 }
 
+/* h1 Style Specific To h1 In Header Element */
+
 header div h1 {
 	margin-left: 16px;
 }
+
+/* Website Table Styles */
 
 body table {
 	border-collapse: collapse;
@@ -456,6 +487,16 @@ body table tr.tableparagraph td {
 	padding: 0px 16px;
 }
 
+table tbody tr td a {
+	color: black;
+}
+
+table tbody tr td a:hover {
+	color: blue;
+}
+
+/* Photos Of Me Figure Styles */
+
 figure.aboutphotos {
 	margin: 8px 16px;
 	width: 100%;
@@ -470,19 +511,14 @@ figure.aboutphotos img {
 	border: 8px solid #f1f1f1;
 }
 
-a:visited {
-	color: inherit;
-}
+/* The Div Is Needed For The Scrollbar In The SlideShow */
 
 figure div {
 	overflow: auto;
 	white-space: nowrap;
 }
 
-section.aboutphotos h1 {
-	padding: 0.01em 16px;
-	font-size: 30px;
-}
+/* About Me Section Styles */
 
 #about {
 	margin: 16px auto;
@@ -493,14 +529,20 @@ section.aboutphotos h1 {
 	text-align: center;
 }
 
+/* Styles To Center The About Me Section */
+
 #about p {
 	width: 60%;
 	margin: 8px auto;
 }
 
+/* Horizontal Line Under About Me Section */
+
 hr {
 	width: 75%;
 }
+
+/* Technical Skills Section Styles */
 
 section.technicalskills {
 	margin: 16px;
@@ -510,11 +552,14 @@ section.technicalskills p {
 	text-indent: 2em;
 }
 
+/* Styles For The Light Grey Div Giving Progress Bar Effect */
 
 section.technicalskills div {
 	color:#000!important;
 	background-color:#9e9e9e!important
 }
+
+/* Styles For The Dark Grey Div Giving Progress Bar Effect */
 
 section.technicalskills div div {
 	color: #fff!important;
@@ -523,7 +568,7 @@ section.technicalskills div div {
 	text-align: center!important;
 }
 
-
+/* General Button Styles */
 
 button {
 	border:none;
@@ -540,18 +585,24 @@ button {
 	margin-bottom:16px!important;	
 }
 
-section.technicalskills button {
-	margin-left: 10%;
-}
-
 button:hover {
 	color:#000!important;
 	background-color:#ccc!important
 }
 
+/* Download Icon Style */
+
 button i {
 	margin-right:16px!important
 }
+
+/* Technical Skills Download Resume Button Styles */
+
+section.technicalskills button {
+	margin-left: 10%;
+}
+
+/* Rate Website Form Styles */
 
 section.technicalskills form {
 	border:none;
@@ -569,6 +620,8 @@ section.technicalskills form {
 	margin-bottom:16px!important;
 	margin-right:10%;
 }
+
+/* Contact Me Footer Styles */
 
 footer {
 	width: 100%;
@@ -589,50 +642,44 @@ footer div {
 	background-color:#009688!important
 }
 
+footer a {
+	color: white;
+}
+
+/* iframe Styles Pages 1-3 */
+
 iframe {
 	width:100%;
 	height: 100%;
 	overflow-x: hidden;
 }
 
-div.pagelinks {
-	margin-top: 25px;
+/* Thank You Page4.html paragraph style */
+
+div.thankyou p {
+	font-weight: bold;
+	width: 75%;
+	margin: 32px;
 }
 
-nav div.resume a:hover {
-	background-color: white!important;
-}
-
-footer a {
-	color: white;
-}
-
-@media (max-width:600px) {
-	.w3-dropdown-hover.w3-mobile .w3-dropdown-content,.w3-dropdown-click.w3-mobile .w3-dropdown-content{position:relative}
-	.w3-hide-small{display:none!important}
-	.w3-mobile{display:block;width:100%!important}
-	.w3-bar-item.w3-mobile,.w3-dropdown-hover.w3-mobile,.w3-dropdown-click.w3-mobile{text-align:center}
-	.w3-dropdown-hover.w3-mobile,.w3-dropdown-hover.w3-mobile .w3-btn,.w3-dropdown-hover.w3-mobile .w3-button,.w3-dropdown-click.w3-mobile,.w3-dropdown-click.w3-mobile .w3-btn,.w3-dropdown-click.w3-mobile .w3-button{width:100%}
-}
-
-@media (max-width:768px) {
-	.w3-modal-content{width:500px}
-	.w3-modal{padding-top:50px}
-}
+/* Style Checks Page Width And Hides Nav Bar On Small Screens */
 
 @media (min-width:993px) {
-	.w3-modal-content{width:900px}
 	.hide-large{display:none}
 	.sidebar{display:block!important}
 }
 
-@media (max-width:992px) and (min-width:601px) {
-	.w3-hide-medium{display:none!important}
-}
+/* Makes Overlay Cover Whole Page On Small Screens */
 
 @media (max-width:992px) {
-	.w3-sidebar.w3-collapse{display:none}
 	div.main{margin-left:0!important;margin-right:0!important}
-	.w3-auto{max-width:100%}
+}
+
+/* Clear Fix Technique */
+
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
 }
 
