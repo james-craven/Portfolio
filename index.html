@@ -2,6 +2,23 @@
 <html>
 
 <head>
+<!--
+      New Perspectives on HTML and CSS
+      Final Assignment
+
+      James Craven Portfolio
+      Author: James Craven
+      Date:   11/01/2019
+
+      Filename:         index.html
+      Supporting files: newCSS.css, page1.html, page2.html,
+                        page3.html, page4.html, me.jpg, me2.jpg,
+                        me3.jpg, me4.jpg, typing.mp4, resume.pdf,
+                        tutorial3review.jpg, tutorial4review.jpg,
+                        tutorial5review.jpg
+                        
+
+   -->
     <title>James Craven Portfolio</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +28,8 @@
 
 <body>
 
-    <!-- Sidebar/menu -->
+    <!-- !Sidebar/menu! -->
+    
     <nav class="animate sidebar" id="mySidebar"><br>
         <section class="clearfix">
             <a href="#" onclick="_close()" class="hide-large" title="close menu">
@@ -20,8 +38,10 @@
             <img src="me.jpg"><br><br>
             <h4><b>JAMES CRAVEN</b></h4>
         </section>
-        <div>
-            <!--Nav Links Div With Font-Awesome Icons//See Documentation at http://fontawesome.io-->
+        
+        <!--! Nav Links Div With Font-Awesome Icons//See Documentation at http://fontawesome.io !-->
+        
+        <div>            
             <a href="index.html#portfolio" onclick="_close()"><i class="fa fa-th-large fa-fw"></i>PORTFOLIO</a>
             <a href="index.html#about" onclick="_close()"><i class="fa fa-user fa-fw"></i>ABOUT</a>
             <a href="index.html#contact" onclick="_close()"><i class="fa fa-envelope fa-fw"></i>CONTACT</a>
@@ -46,24 +66,34 @@
 
     </nav>
 
-    <!-- Overlay effect when opening sidebar on small screens -->
+    <!-- !Overlay effect when opening sidebar on small screens! -->
 
     <div class="hide-large" onclick="_close()" title="close side menu" id="myOverlay"></div>
 
     <!-- !PAGE CONTENT! -->
+    
+    <!-- Main Div Used To Move All Content Beside The Nav Bar -->
+    
     <div class="main">
 
         <!-- Header -->
+        
         <header id="portfolio">
-
+            
+            <!-- Header Video -->
+            
             <div class="headerVideo">
                 <video id="headerVideo" autoplay="true" loop muted>
 				  <source src="typing.mp4" type="video/mp4">
 			  </video>
             </div>
-
+            
+            <!-- Circle Picture Only Visible On Small Screens -->
+            
             <img src="me.jpg" class="hide-large">
-
+            
+            <!-- Hide Nav Bar Button Only Visible On Small Screens -->
+            
             <span class="hide-large" onclick="_open()"><i class="fa fa-bars"></i></span>
 
             <div class="clearfix">
@@ -73,12 +103,13 @@
         </header>
 
         <!-- !Photo Grid Table! -->
+        
         <table>
             <tbody>
                 <tr class="tablephoto">
-                    <td><a href="http://james-craven.github.io/tutorial4review" target="_blank" title="Opens In New Tab"><img src="tutorial4Review.jpg" alt="Website Snapshot"></a></td>
-                    <td><a href="http://james-craven.github.io/tutorial3review/" target="_blank" title="Opens In New Tab"><img src="tutorial3review.jpg" alt="Website Snapshot"></a></td>
-                    <td><a href="https://james-craven.github.io/Unit5Review/" target="_blank" title="Opens In New Tab"><img src="tutorial5Review.jpg" alt="Website Snapshot"></a></td>
+                    <td><a href="https://james-craven.github.io/tutorial4review" target="_blank" title="Opens In New Tab"><img src="tutorial4review.jpg" alt="Website Snapshot"></a></td>
+                    <td><a href="https://james-craven.github.io/tutorial3review/" target="_blank" title="Opens In New Tab"><img src="tutorial3review.jpg" alt="Website Snapshot"></a></td>
+                    <td><a href="https://james-craven.github.io/Unit5Review/" target="_blank" title="Opens In New Tab"><img src="tutorial5review.jpg" alt="Website Snapshot"></a></td>
                 </tr>
                 <tr class="tableparagraph">
                     <td>
@@ -99,6 +130,8 @@
                 </tr>
             </tbody>
         </table>
+        
+        <!-- !Slideshow About Me Photos! -->
 
         <figure class="aboutphotos">
             <h1><b>Photos Of Me</b></h1>
@@ -108,7 +141,9 @@
                 <img src="me4.jpg">
             </div>
         </figure>
-
+        
+        <!-- About Me Section -->
+        
         <section id="about">
 
             <h1><b>About Me</b></h1>
@@ -119,14 +154,20 @@
             <br>
             <hr>
             <br>
-
+        
+        <!-- End About Me Section -->
+        
         </section>
 
         <!--Technical Skills Section-->
 
         <section class="technicalskills">
             <h1><b>Technical Skills</b></h1>
+            
             <!-- Progress bars / Skills -->
+            <!-- By Wrapping Divs Inside Of Divs, You Can Adjust The Styles To Get The
+                 Progress Bar Effect//The Width Styles Are Inline Because They Relate To
+                 The Content Right Next To Them-->
             <p>Python</p>
             <div>
                 <div class="clearfix" style="width:95%">95%</div>
@@ -141,12 +182,18 @@
             </div>
             <p></p>
             <br>
+            
+            <!-- Download Resume/Rate My Website Form Div -->
+            
             <div>
                 <a href="resume.pdf" target="_blank">
 			  <button>
 				<i class="fa fa-download"></i>Download Resume
 			  </button>
 			</a>
+                
+                <!-- Rate My Website Form -->
+                
                 <form action="#" method="GET" enctype="text/plain">
                     <label for="rating">Please Rate My Website: </label>
                     <input type="radio" name="1Star" value="1Star">1 Star
@@ -156,11 +203,16 @@
                     <input type="radio" name="5Star" value="5Star">5 Star
                     <input type="Submit" value="Submit Rating">
                 </form>
-
+            
+            <!-- End Resume/Form Div -->
+            
             </div>
+            
+        <!-- End Technical Skills Section -->    
+            
         </section>
 
-        <!-- Contact Section -->
+        <!-- Contact Footer -->
 
         <footer id="contact">
             <h1><b>Contact Me</b></h1>
@@ -179,8 +231,8 @@
 
         </footer>
 
-        <!-- !End Of Main Div! -->
-    </div>
+        
+    </div><!-- !End Of Main Div! -->
 
 
 
