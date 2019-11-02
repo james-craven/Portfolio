@@ -1,98 +1,167 @@
+<!DOCTYPE html>
 <html>
 
-	<head>
-	<title>James Craven Portfolio</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="newCSS.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	</head>
+<head>
+<!--
+      New Perspectives on HTML and CSS
+      Final Assignment
+
+      James Craven Portfolio
+      Author: James Craven
+      Date:   11/01/2019
+
+      Filename:         page4.html
+      Supporting files: newCSS.css, index.html, page2.html,
+                        page3.html, page1.html, me.jpg, typing.mp4, resume.pdf
+   -->
+    <title>James Craven Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="newCSS.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <!-- Sidebar/menu -->
 	
-	<body>
-
-	 <!-- Sidebar/menu -->
-	  <nav class="animate sidebar" id="mySidebar"><br>
-		<section class="clearfix">
-		  <a href="#" onclick="_close()" class="hide-large" title="close menu">
-			<i class="fa fa-remove"></i>
-		  </a>
-		  <img src="Me.jpg"><br><br>
-		  <h4><b>JAMES CRAVEN</b></h4>
-		</section>
-		<div> <!--Nav Links Div With Font-Awesome Icons//See Documentation at http://fontawesome.io-->
-		  <a href="newIndex.html#portfolio" onclick="_close()"><i class="fa fa-th-large fa-fw"></i>PORTFOLIO</a> 
-		  <a href="newIndex.html#about" onclick="_close()"><i class="fa fa-user fa-fw"></i>ABOUT</a> 
-		  <a href="newIndex.html#contact" onclick="_close()"><i class="fa fa-envelope fa-fw"></i>CONTACT</a>
-		</div>
+    <nav class="animate sidebar" id="mySidebar">
+        <br>
+        <section class="clearfix">
+            <a href="#" onclick="_close()" class="hide-large" title="close menu">
+                <i class="fa fa-remove"></i>
+            </a>
+            <img src="me.jpg">
+            <br>
+            <br>
+            <h4><b>JAMES CRAVEN</b></h4>
+        </section>
 		
-		<h4><b>WEBSITE EXAMPLES</b></h4>
+		<!--Nav Links Div With Font-Awesome Icons//See Documentation at http://fontawesome.io-->
 		
-		<div class="pagelinks">
-		  <a href="page1.html"><i class="fa fa-bicycle fa-fw"></i>Cycle Pathology</a> 
-		  <a href=""><i class="fa fa-snowflake-o fa-fw"></i>Sunny Acres</a> 
-		  <a href=""><i class="fa fa-microphone fa-fw"></i>KPAF Radio Schedule</a>
-		  <a href=""><i class="fa fa-angle-right fa-fw"></i>THANK YOU</a>
-		</div>
+        <div>			
+            <a href="index.html#portfolio" onclick="_close()"><i class="fa fa-th-large fa-fw"></i>PORTFOLIO</a>
+            <a href="index.html#about" onclick="_close()"><i class="fa fa-user fa-fw"></i>ABOUT</a>
+            <a href="index.html#contact" onclick="_close()"><i class="fa fa-envelope fa-fw"></i>CONTACT</a>
+        </div>
+
+        <h4><b>WEBSITE EXAMPLES</b></h4>
+
+        <div class="pagelinks">
+            <a href="page1.html"><i class="fa fa-bicycle fa-fw"></i>Cycle Pathology</a>
+            <a href="page2.html"><i class="fa fa-snowflake-o fa-fw"></i>Sunny Acres</a>
+            <a href="page3.html"><i class="fa fa-microphone fa-fw"></i>KPAF Radio Schedule</a>
+            <a href="page4.html"><i class="fa fa-angle-right fa-fw"></i>THANK YOU</a>
+        </div>
+
+		<div class="resume">
+            <a href="resume.pdf" target="_blank">
+			  <button>
+				<i class="fa fa-download"></i>Download Resume
+			  </button>
+			</a>
+        </div>
+
+    </nav>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+
+    <div class="hide-large" onclick="_close()" title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+	
+    <!-- Main Div Used To Move All Content Beside The Nav Bar -->
+	
+    <div class="main clearfix">
+
+        <!-- Header -->
 		
-	  </nav>
-	  
-	  <!-- Overlay effect when opening sidebar on small screens -->
+        <header id="portfolio">
 
-	  <div class="hide-large" onclick="_close()" title="close side menu" id="myOverlay"></div>
-	  
-	  <!-- !PAGE CONTENT! -->
-	  <div class="main clearfix">
+            <!-- Header Video -->
 
-	  <!-- Header -->
-	  <header id="portfolio">
-	  
-		  <div class="headerVideo">
-			  <video id="headerVideo" autoplay="true" loop muted>
-				  <source src="untitled.mp4" type="video/mp4">
-			  </video>
-		  </div>
-		  
-		  <img src="me.jpg" class="hide-large">
-		  
-		  <span class="hide-large" onclick="_open()"><i class="fa fa-bars"></i></span>
-		  
-		  <div class="clearfix">
-			 <h1><b>Cycle Pathology Website</b></h1>
-			 <p>
-				 The following is the example site contained in an iframe. To see the site by itself, 
-				 click <a href="http://james-craven.github.io/tutorial4review" target="_blank">HERE</a>
-			 </p>
-			 <p>To see the source code, click 
-			 	<a href="https://github.com/james-craven/tutorial4review" target="_blank">HERE</a>
-			</p>
-		  </div>
-		  
-	  </header>
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  <script>
-// Script to open and close sidebar
-function _open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
- 
-function _close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
-</script>
+            <div class="headerVideo">
+                <video id="headerVideo" autoplay="true" loop muted>
+                    <source src="typing.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <!-- Circle Picture Only Visible On Small Screens -->
+
+            <img src="me.jpg" class="hide-large">
+
+            <!-- Hide Nav Bar Button Only Visible On Small Screens -->
+
+            <span class="hide-large" onclick="_open()"><i class="fa fa-bars"></i></span>
+
+			<!-- PAGE CONTENT -->
+
+            <div class="clearfix thankyou">
+                <h1><b>Thank You For Viewing My Portfolio!</b></h1>
+                <p>
+                    It took some hard work to put this website together. Between formatting the seperate pages
+					and getting github to cooperate, I got lost in the joys of figuring out puzzles and making
+					things work. I hope you've enjoyed exploring it all as much as I have had making it. The 
+					following is more details on the individual websites as well as the resources I used to
+					create the site:
+                </p>
+                <p>
+					Page 1 is a review assignment I completed that taught me how layouts work in HTML5 and CSS. 
+					Among the various principles I learned were floats, positions, and display properties in 
+					CSS. One web design that was frequently stressed was backwards compatibility/progressive
+					enhancement. 
+                </p>
+				<p>
+					Page 2 is an earlier review assignment from the course focusing on user experience aspects of 
+					CSS such as font styles and appealing features. Among the things I learned while completing this 
+					assignment was using non-standard font faces. 
+				</p>
+				<p>
+					Page 3 is all about tables and their styles. I had to take a little time on this one and really 
+					study out the concepts to understand the structure and layout of a table. I learned how to combine
+					columns and rows, apply styles to groups of columns/rows, and add borders to the table. 
+				</p>
+				<p>
+					Once again, thank you for viewing my portfolio. I hope this has given you a good understanding of 
+					my programming ability up to this point!
+				</p>
+            </div><!-- End thankyou Div -->
+
+        </header>
+		
+		<!-- Contact Footer -->
+		
+		<footer id="contact">
+            <h1><b>Contact Me</b></h1>
+            <div>
+                <p><i class="fa fa-envelope"></i></p>
+                <p><a href="MAILTO:jamescraven49@gmail.com">jamescraven49@gmail.com</a></p>
+            </div>
+            <div id="location">
+                <p><i class="fa fa-map-marker"></i></p>
+                <p>San Antonio, TX</p>
+            </div>
+            <div>
+                <p><i class="fa fa-phone"></i></p>
+                <p>nnn-nnn-nnnn</p>
+            </div>
+
+        </footer>
+		
+        <script>
+            // Script to open and close sidebar
+            function _open() {
+                document.getElementById("mySidebar").style.display = "block";
+                document.getElementById("myOverlay").style.display = "block";
+            }
+
+            function _close() {
+                document.getElementById("mySidebar").style.display = "none";
+                document.getElementById("myOverlay").style.display = "none";
+            }
+        </script>
+
+	</div>
 
 </body>
 </hrml>
