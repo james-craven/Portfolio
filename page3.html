@@ -1,100 +1,150 @@
+<!DOCTYPE html>
 <html>
 
-	<head>
-	<title>James Craven Portfolio</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="newCSS.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	</head>
-	
-	<body>
+<head>
+<!--
+      New Perspectives on HTML and CSS
+      Final Assignment
 
-	 <!-- Sidebar/menu -->
-	  <nav class="animate sidebar" id="mySidebar"><br>
-		<section class="clearfix">
-		  <a href="#" onclick="_close()" class="hide-large" title="close menu">
-			<i class="fa fa-remove"></i>
-		  </a>
-		  <img src="me.jpg"><br><br>
-		  <h4><b>JAMES CRAVEN</b></h4>
-		</section>
-		<div> <!--Nav Links Div With Font-Awesome Icons//See Documentation at http://fontawesome.io-->
-		  <a href="index.html#portfolio" onclick="_close()"><i class="fa fa-th-large fa-fw"></i>PORTFOLIO</a> 
-		  <a href="index.html#about" onclick="_close()"><i class="fa fa-user fa-fw"></i>ABOUT</a> 
-		  <a href="index.html#contact" onclick="_close()"><i class="fa fa-envelope fa-fw"></i>CONTACT</a>
-		</div>
-		
-		<h4><b>WEBSITE EXAMPLES</b></h4>
-		
-		<div class="pagelinks">
-		  <a href="page1.html"><i class="fa fa-bicycle fa-fw"></i>Cycle Pathology</a> 
-		  <a href="page2.html"><i class="fa fa-snowflake-o fa-fw"></i>Sunny Acres</a> 
-		  <a href="page3.html"><i class="fa fa-microphone fa-fw"></i>KPAF Radio Schedule</a>
-		  <a href="page4.html"><i class="fa fa-angle-right fa-fw"></i>THANK YOU</a>
-		</div>
-		
-	  </nav>
-	  
-	  <!-- Overlay effect when opening sidebar on small screens -->
+      James Craven Portfolio
+      Author: James Craven
+      Date:   11/01/2019
 
-	  <div class="hide-large" onclick="_close()" title="close side menu" id="myOverlay"></div>
-	  
-	  <!-- !PAGE CONTENT! -->
-	  <div class="main clearfix">
+      Filename:         page3.html
+      Supporting files: newCSS.css, index.html, page2.html,
+                        page1.html, page4.html, me.jpg, typing.mp4, resume.pdf
+   -->
+    <title>James Craven Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="newCSS.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 
-	  <!-- Header -->
-	  <header id="portfolio">
-	  
-		  <div class="headerVideo">
-			  <video id="headerVideo" autoplay="true" loop muted>
-				  <source src="typing.mp4" type="video/mp4">
-			  </video>
-		  </div>
-		  
-		  <img src="me.jpg" class="hide-large">
-		  
-		  <span class="hide-large" onclick="_open()"><i class="fa fa-bars"></i></span>
-		  
-		  <div class="clearfix">
-			 <h1><b>Cycle Pathology Website</b></h1>
-			 <p>
-				 The following is the example site contained in an iframe. To see the site by itself, 
-				 click <a href="https://james-craven.github.io/Unit5Review" target="_blank">HERE</a>
-			 </p>
-			 <p>To see the source code, click 
-			 	<a href="https://github.com/james-craven/Unit5Review" target="_blank">HERE</a>
-			</p>
-		  </div>
-		  
-	  </header>
-	  
-	  <iframe src="https://james-craven.github.io/Unit5Review">
-	  <p>iframes are not supported by your browser</p>
-	  </iframe>
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  <script>
-// Script to open and close sidebar
-function _open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
- 
-function _close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
-</script>
+<body>
+
+    <!-- Sidebar/menu -->
+    
+    <nav class="animate sidebar" id="mySidebar">
+        <br>
+        <section class="clearfix">
+            <a href="#" onclick="_close()" class="hide-large" title="close menu">
+                <i class="fa fa-remove"></i>
+            </a>
+            <img src="me.jpg">
+            <br>
+            <br>
+            <h4><b>JAMES CRAVEN</b></h4>
+        </section>
+        
+        <!--! Nav Links Div With Font-Awesome Icons//See Documentation at http://fontawesome.io !-->
+        
+        <div>            
+            <a href="index.html#portfolio" onclick="_close()"><i class="fa fa-th-large fa-fw"></i>PORTFOLIO</a>
+            <a href="index.html#about" onclick="_close()"><i class="fa fa-user fa-fw"></i>ABOUT</a>
+            <a href="index.html#contact" onclick="_close()"><i class="fa fa-envelope fa-fw"></i>CONTACT</a>
+        </div>
+
+        <h4><b>WEBSITE EXAMPLES</b></h4>
+
+        <div class="pagelinks">
+            <a href="page1.html"><i class="fa fa-bicycle fa-fw"></i>Cycle Pathology</a>
+            <a href="page2.html"><i class="fa fa-snowflake-o fa-fw"></i>Sunny Acres</a>
+            <a href="page3.html"><i class="fa fa-microphone fa-fw"></i>KPAF Radio Schedule</a>
+            <a href="page4.html"><i class="fa fa-angle-right fa-fw"></i>THANK YOU</a>
+        </div>
+        
+        <div class="resume">
+            <a href="resume.pdf" target="_blank">
+			  <button>
+				<i class="fa fa-download"></i>Download Resume
+			  </button>
+			</a>
+        </div>
+        
+    </nav>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+
+    <div class="hide-large" onclick="_close()" title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    
+    <!-- Main Div Used To Move All Content Beside The Nav Bar -->
+    
+    <div class="main clearfix">
+
+        <!-- Header -->
+        
+        <header id="portfolio">
+
+            <!-- Header Video -->
+
+            <div class="headerVideo">
+                <video id="headerVideo" autoplay="true" loop muted>
+                    <source src="typing.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <!-- Circle Picture Only Visible On Small Screens -->
+
+            <img src="me.jpg" class="hide-large">
+
+            <!-- Hide Nav Bar Button Only Visible On Small Screens -->
+
+            <span class="hide-large" onclick="_open()"><i class="fa fa-bars"></i></span>
+
+            <div class="clearfix">
+                <h1><b>Cycle Pathology Website</b></h1>
+                <p>
+                    The following is the example site contained in an iframe. To see the site by itself, click <a href="https://james-craven.github.io/Unit5Review" target="_blank">HERE</a>
+                </p>
+                <p>To see the source code, click
+                    <a href="https://github.com/james-craven/Unit5Review" target="_blank">HERE</a>
+                </p>
+            </div>
+
+        </header>
+
+        <!-- Window To Website Hosting My Work -->
+
+        <iframe src="https://james-craven.github.io/Unit5Review">
+            <p>iframes are not supported by your browser</p>
+        </iframe>
+
+        <!-- Contact Footer -->
+
+        <footer id="contact">
+            <h1><b>Contact Me</b></h1>
+            <div>
+                <p><i class="fa fa-envelope"></i></p>
+                <p><a href="MAILTO:jamescraven49@gmail.com">jamescraven49@gmail.com</a></p>
+            </div>
+            <div id="location">
+                <p><i class="fa fa-map-marker"></i></p>
+                <p>San Antonio, TX</p>
+            </div>
+            <div>
+                <p><i class="fa fa-phone"></i></p>
+                <p>nnn-nnn-nnnn</p>
+            </div>
+
+        </footer>
+
+        <script>
+            // Script to open and close sidebar
+            function _open() {
+                document.getElementById("mySidebar").style.display = "block";
+                document.getElementById("myOverlay").style.display = "block";
+            }
+
+            function _close() {
+                document.getElementById("mySidebar").style.display = "none";
+                document.getElementById("myOverlay").style.display = "none";
+            }
+        </script>
+
+	</div>
 
 </body>
 </hrml>
